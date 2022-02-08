@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/io_main"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text=""
+        tools:text="10x20"
+        android:textAlignment="viewEnd"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/space_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/space_"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/io_main" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text=""
+        tools:text="200"
+        android:textAlignment="viewEnd"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space_" />
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output" />
+    <TextView
+        android:id="@+id/percent"
+        style="@style/buttons_top_row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="%"
+        app:layout_constraintBottom_toTopOf="@+id/bracket_open"
+        app:layout_constraintEnd_toStartOf="@+id/pi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/pi"
+        style="@style/buttons_top_row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="π"
+        app:layout_constraintBottom_toTopOf="@+id/bracket_close"
+        app:layout_constraintEnd_toStartOf="@+id/caret"
+        app:layout_constraintStart_toEndOf="@+id/percent"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/caret"
+        style="@style/buttons_top_row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="^"
+        app:layout_constraintBottom_toTopOf="@+id/divide"
+        app:layout_constraintEnd_toStartOf="@+id/fac"
+        app:layout_constraintStart_toEndOf="@+id/pi"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/fac"
+        style="@style/buttons_top_row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="!"
+        app:layout_constraintBottom_toTopOf="@+id/ac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caret"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/bracket_open"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="("
+        app:layout_constraintBottom_toTopOf="@+id/seven"
+        app:layout_constraintEnd_toStartOf="@+id/bracket_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/percent" />
+
+    <TextView
+        android:id="@+id/bracket_close"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=")"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintEnd_toStartOf="@+id/divide"
+        app:layout_constraintStart_toEndOf="@+id/bracket_open"
+        app:layout_constraintTop_toBottomOf="@id/pi" />
+
+    <TextView
+        android:id="@+id/divide"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="÷"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintEnd_toStartOf="@+id/ac"
+        app:layout_constraintStart_toEndOf="@+id/bracket_close"
+        app:layout_constraintTop_toBottomOf="@id/caret" />
+
+    <TextView
+        android:id="@+id/ac"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/sky_blue"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divide"
+        app:layout_constraintTop_toBottomOf="@id/fac" />
+
+    <TextView
+        android:id="@+id/seven"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintEnd_toStartOf="@+id/eight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bracket_open" />
+
+    <TextView
+        android:id="@+id/eight"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintEnd_toStartOf="@+id/nine"
+        app:layout_constraintStart_toEndOf="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@id/bracket_close" />
+
+    <TextView
+        android:id="@+id/nine"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toStartOf="@+id/multiply"
+        app:layout_constraintStart_toEndOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@id/divide" />
+
+    <TextView
+        android:id="@+id/multiply"
+        style="@style/buttons"
+        android:background="@color/sky_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="x"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nine"
+        app:layout_constraintTop_toBottomOf="@id/ac" />
+
+    <TextView
+        android:id="@+id/four"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintEnd_toStartOf="@+id/five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seven" />
+
+    <TextView
+        android:id="@+id/five"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintEnd_toStartOf="@+id/six"
+        app:layout_constraintStart_toEndOf="@+id/four"
+        app:layout_constraintTop_toBottomOf="@id/eight" />
+
+    <TextView
+        android:id="@+id/six"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@id/nine" />
+
+    <TextView
+        android:id="@+id/minus"
+        style="@style/buttons"
+        android:background="@color/sky_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/six"
+        app:layout_constraintTop_toBottomOf="@id/multiply" />
+
+    <TextView
+        android:id="@+id/one"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintEnd_toStartOf="@+id/two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/four" />
+
+    <TextView
+        android:id="@+id/two"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/period"
+        app:layout_constraintEnd_toStartOf="@+id/three"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toBottomOf="@id/five" />
+
+    <TextView
+        android:id="@+id/three"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/two"
+        app:layout_constraintTop_toBottomOf="@id/six" />
+
+    <TextView
+        android:id="@+id/plus"
+        style="@style/buttons"
+        android:background="@color/sky_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/equals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/three"
+        app:layout_constraintTop_toBottomOf="@id/minus" />
+
+    <TextView
+        android:id="@+id/zero"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/period"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one" />
+
+    <TextView
+        android:id="@+id/period"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintStart_toEndOf="@+id/zero"
+        app:layout_constraintTop_toBottomOf="@id/two" />
+
+    <TextView
+        android:id="@+id/delete"
+        style="@style/buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equals"
+        app:layout_constraintStart_toEndOf="@+id/period"
+        app:layout_constraintTop_toBottomOf="@id/three" />
+
+    <TextView
+        android:id="@+id/equals"
+        style="@style/buttons"
+        android:background="@color/sky_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delete"
+        app:layout_constraintTop_toBottomOf="@id/plus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
