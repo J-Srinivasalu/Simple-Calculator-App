@@ -1,7 +1,7 @@
 # Simple-Calculator-App
 a simple calculator implemented using postfix evaluation
 # issues
-- urinary operations not supported
+- unary operations not supported
 <h1>Screenshots</h1>
 <hr>
 <p align="center">
